@@ -20,6 +20,11 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   binding.pry
+  if text.scan([A-Z]\w*[.?!,]) == nil || text.scan([A-Z]\w*[.?!,]) == []
+    return false
+  else
+    return true
+  end
 end
 
 def valid_phone_number?(phone)
